@@ -29,6 +29,19 @@ header {
   position: absolute;
   left: 0;
   bottom: 3rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.linkedinIcon,
+.gitHubIcon {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.linkedinIcon:hover,
+.gitHubIcon:hover {
+  color: var(--color-white);
 }
 
 .header__socials::after {
@@ -46,7 +59,47 @@ header {
   left: 50%;
   transform: translateX(-50%);
   margin-top: 4rem;
-  border-radius: 12rem 12rem 0 0;
-  overflow: hidden;
+  border-radius: 40px;
+
   padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.me img {
+  border-radius: 20px;
+}
+
+.scroll__down {
+  color: var(--primary-color);
+  position: absolute;
+  right: -2.3rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    height: 68vh;
+  }
+
+  section {
+    margin-top: 6rem;
+  }
+}
+
+/* small devices */
+@media screen and (max-width: 600px) {
+  header {
+    height: 100vh;
+  }
+
+  .header__socials,
+  .scroll__down {
+    display: none;
+  }
+
+  .me {
+    height: 300px;
+  }
 }

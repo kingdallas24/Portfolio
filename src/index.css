@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   border: 0;
@@ -21,7 +23,7 @@
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
-  --transiotion: all 400ms ease;
+  --transition: all 400ms ease;
 }
 
 html {
@@ -34,7 +36,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: var(--color-bg);
+  background-color: var(--color-bg);
   color: var(--color-white);
   line-height: 1.7;
 }
@@ -42,7 +44,7 @@ body {
 /* General Styles */
 
 .container {
-  width: var(--container--width-lg);
+  width: var(--container-width-md);
   margin: 0 auto;
 }
 
@@ -62,7 +64,7 @@ section {
   margin-top: 8rem;
 }
 
-section > h1,
+section > h2,
 section > h5 {
   text-align: center;
   color: var(--color-light);
@@ -75,7 +77,11 @@ section > h2 {
 
 .text-light {
   color: var(--color-light);
-  transition: var(--transiotion);
+  transition: var(--transition);
+}
+
+a {
+  color: var(--primary-color);
 }
 
 a:hover {
@@ -89,7 +95,7 @@ a:hover {
   padding: 0.75rem 1.2rem;
   cursor: pointer;
   border: 1px solid var(--primary-color);
-  transition: var(--transiotion);
+  transition: var(--transition);
 }
 
 .btn:hover {
@@ -106,7 +112,7 @@ a:hover {
 img {
   display: block;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Media queries (medium devices)*/
@@ -122,7 +128,7 @@ img {
 }
 
 /* small devices */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
   .container {
     width: var(--container-width-sm);
   }
