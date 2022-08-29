@@ -53,8 +53,8 @@ header {
 
 .me {
   background: linear-gradient(var(--primary-color), transparent);
-  width: 22rem;
-  height: 30rem;
+
+  height: auto;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -66,6 +66,7 @@ header {
 
 .me img {
   border-radius: 20px;
+  width: 400px;
 }
 
 .scroll__down {
@@ -79,10 +80,6 @@ header {
 }
 
 @media screen and (max-width: 1024px) {
-  header {
-    height: 68vh;
-  }
-
   section {
     margin-top: 6rem;
   }
@@ -90,16 +87,13 @@ header {
 
 /* small devices */
 @media screen and (max-width: 600px) {
-  header {
-    height: 100vh;
-  }
-
   .header__socials,
   .scroll__down {
     display: none;
   }
 
-  .me {
-    height: 300px;
+  .me img {
+    height: auto;
+    width: 2calc0px;
   }
 }
